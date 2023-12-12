@@ -19,6 +19,9 @@
             ],
             "~images/*": [
                 "src/assets/images/*"
+            ],
+            "~pages/*": [
+                "src/pages/*"
             ]
         }
     }
