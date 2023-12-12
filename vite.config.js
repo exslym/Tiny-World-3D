@@ -17,6 +17,7 @@ export default defineConfig({
 		devSourcemap: true,
 	},
 	plugins: [react(), ViteAliases()],
+	assetsInclude: ['**/*.glb'],
 	server: {
 		hmr: true,
 		port: 3000,
