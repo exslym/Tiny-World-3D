@@ -7,6 +7,18 @@
             ],
             "~components/*": [
                 "src/components/*"
+            ],
+            "~untitled folder/*": [
+                "src/untitled folder/*"
+            ],
+            "~assets/*": [
+                "src/assets/*"
+            ],
+            "~icons/*": [
+                "src/assets/icons/*"
+            ],
+            "~images/*": [
+                "src/assets/images/*"
             ]
         }
     }
