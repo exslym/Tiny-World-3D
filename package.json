@@ -15,6 +15,7 @@
 		"cover 99.5%"
 	],
 	"dependencies": {
+		"@emailjs/browser": "^3.11.0",
 		"@react-spring/three": "^9.7.3",
 		"@react-three/drei": "^9.92.1",
 		"@react-three/fiber": "^8.15.12",
@@ -34,7 +35,6 @@
 		"eslint-plugin-react-refresh": "^0.4.5",
 		"postcss": "^8.4.32",
 		"tailwindcss": "^3.3.6",
-		"vite": "^5.0.8",
-		"vite-aliases": "^0.11.3"
+		"vite": "^5.0.8"
 	}
 }
