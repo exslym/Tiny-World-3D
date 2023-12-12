@@ -1,0 +1,37 @@
+{
+	"name": "world-3d",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite --port 3000 --open",
+		"serve": "vite preview --port 3001 --open",
+		"dev": "vite",
+		"build": "vite build",
+		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+		"deploy": "gh-pages -d build"
+	},
+	"browserslist": [
+		"cover 99.5%"
+	],
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.20.1",
+		"sass": "^1.69.5"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.43",
+		"@types/react-dom": "^18.2.17",
+		"@vitejs/plugin-react": "^4.2.1",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.55.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.5",
+		"postcss": "^8.4.32",
+		"tailwindcss": "^3.3.6",
+		"vite": "^5.0.8",
+		"vite-aliases": "^0.11.3"
+	}
+}
