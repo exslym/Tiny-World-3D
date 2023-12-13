@@ -1,10 +1,8 @@
 import {
 	astro,
-	car,
 	contact,
 	css,
 	docker,
-	estate,
 	express,
 	flutter,
 	git,
@@ -17,21 +15,26 @@ import {
 	mui,
 	nextjs,
 	nodejs,
-	pricewise,
 	qwik,
 	react,
 	redux,
 	sass,
-	snapgram,
-	summiz,
 	tailwindcss,
-	threads,
 	threejs,
 	typescript,
 	vite,
 	webpack,
 } from '../assets/icons';
-import { doctoratwork, freelance } from '../assets/images';
+import {
+	ai_3d_tshirts,
+	currency_list,
+	dcreative,
+	doctoratwork,
+	freelance,
+	game_2048,
+	portfolio_3d,
+	space_invaders,
+} from '../assets/images';
 
 export const skills = [
 	{
@@ -204,51 +207,57 @@ export const socialLinks = [
 
 export const projects = [
 	{
-		iconUrl: pricewise,
-		theme: 'btn-back-red',
-		name: 'Amazon Price Tracker',
-		description:
-			'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-		link: 'https://github.com/adrianhajdin/pricewise',
-	},
-	{
-		iconUrl: threads,
-		theme: 'btn-back-green',
-		name: 'Full Stack Threads Clone',
-		description:
-			'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-		link: 'https://github.com/adrianhajdin/threads',
-	},
-	{
-		iconUrl: car,
+		preview: portfolio_3d,
 		theme: 'btn-back-blue',
-		name: 'Car Finding App',
+		link1: 'https://github.com/exslym/My-Portfolio-3D/',
+		link2: 'https://exslym.github.io/My-Portfolio-3D/',
+		name: 'My Portfolio 3D',
 		description:
-			'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-		link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+			'An outstanding and impressive 3D Developer Portfolio website using React, 3D-graphics and animations with ThreeJS and Framer Motion, and TailwindCSS!',
 	},
 	{
-		iconUrl: snapgram,
-		theme: 'btn-back-pink',
-		name: 'Full Stack Instagram Clone',
-		description:
-			'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-		link: 'https://github.com/adrianhajdin/social_media_app',
-	},
-	{
-		iconUrl: estate,
+		preview: ai_3d_tshirts,
 		theme: 'btn-back-black',
-		name: 'Real-Estate Application',
+		link1: 'https://github.com/exslym/3D-AI-Project/',
+		link2: 'https://exslym.github.io/3D-AI-Project/',
+		name: '3D T-Shirts Design with AI',
 		description:
-			'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-		link: 'https://github.com/adrianhajdin/projects_realestate',
+			'A website project where you can make custom design t-shirts in 3D with the help of AI in real-time. You can also choose color or upload your own images to make your T-shirt truly unique.',
 	},
 	{
-		iconUrl: summiz,
-		theme: 'btn-back-yellow',
-		name: 'AI Summarizer Application',
+		preview: currency_list,
+		theme: 'btn-back-green',
+		link1: 'https://github.com/exslym/Crypto-Coins-List/',
+		link2: 'https://cryptocurrency-prices-exslym.vercel.app/',
+		name: 'Cryptocurrency Prices',
 		description:
-			'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-		link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+			'A website version of mobile App created using the Flutter framework. The app provides real-time information about the prices of various cryptocurrencies such as Bitcoin, Ethereum, Litecoin, and many others.',
+	},
+	{
+		preview: dcreative,
+		theme: 'btn-back-red',
+		link1: 'https://github.com/exslym/D-Creative-Studio/',
+		link2: 'https://exslym.github.io/D-Creative-Studio/',
+		name: 'D-Creative Studio',
+		description:
+			'An outstanding animate-on-scroll landing for Creative Studio - a team of innovative designers, developers, videographs and artists who specialize in crafting unique and engaging digital experiences for their clients.',
+	},
+	{
+		preview: space_invaders,
+		theme: 'btn-back-yellow',
+		link1: 'https://github.com/exslym/Space-Invaders_GAME/',
+		link2: 'https://exslym.github.io/Space-Invaders_GAME/',
+		name: 'Space Invaders [Game]',
+		description:
+			'Web-based legendary classic arcade game Space Invaders made with JavaScript and Canvas with its iconic pixel graphics and addictive gameplay with mobile adaptivity and touch controls.',
+	},
+	{
+		preview: game_2048,
+		theme: 'btn-back-pink',
+		link1: 'https://github.com/exslym/2048-Game/',
+		link2: 'https://exslym.github.io/2048-Game/',
+		name: '2048 [Game]',
+		description:
+			'This is a popular puzzle game where the player must combine numbered tiles to reach the ultimate goal of creating a tile with the number 2048. When two tiles with the same number collide, they merge into one tile with a value equal to the sum of the two.',
 	},
 ];

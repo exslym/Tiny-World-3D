@@ -9,22 +9,22 @@ const Navbar = () => {
 			>
 				<p className='blue-gradient_text text-lg'>eXs</p>
 			</NavLink>
-			<nav className='flex text-lg gap-7 font-semibold'>
+			<nav className='flex text-lg lg:gap-7 gap-4 font-semibold'>
 				<NavLink
 					to='/about'
-					className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-black')}
+					className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-slate-700')}
 				>
 					About
 				</NavLink>
 				<NavLink
 					to='/projects'
-					className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-black')}
+					className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-slate-700')}
 				>
 					Projects
 				</NavLink>
 				<NavLink
 					to='/contact'
-					className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-black')}
+					className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-slate-700')}
 				>
 					Contact
 				</NavLink>

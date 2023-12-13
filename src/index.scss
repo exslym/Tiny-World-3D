@@ -63,7 +63,7 @@ body:has(.card[data-color='green']:hover) {
 	}
 
 	.info-box {
-		@apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+		@apply mx-5 relative flex text-white flex-col items-center gap-0 w-full max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
 	}
 
 	.neo-btn {
@@ -112,22 +112,38 @@ body:has(.card[data-color='green']:hover) {
 	will-change: transform;
 	box-shadow: 16px 0 40px #e4e4e4;
 }
+.block-container .btn-back-alt {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	width: inherit;
+	height: inherit;
+	transition: 250ms;
+	transform-style: preserve-3d;
+	transform-origin: bottom right;
+	transform: translateX(-28px) translateY(25px) rotateZ(15deg);
+	will-change: transform;
+	box-shadow: 16px 0 40px #e4e4e4;
+}
 
 .block-container .btn-back-red {
-	background: linear-gradient(135deg, #ff4b1f -20%, #ff9068 120%);
+	background: linear-gradient(135deg, #ff4314 -50%, #ff9a76 100%);
 }
 
 .block-container .btn-back-green {
-	background: linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%);
+	background: linear-gradient(135deg, #11d3f3 -20%, #adfda2 120%);
 }
 
 .block-container .btn-back-yellow {
-	background: linear-gradient(135deg, #f7971e -20%, #ffd200 120%);
+	background: linear-gradient(135deg, #f7971e -10%, #ffd200 120%);
 }
 
 .block-container .btn-back-blue {
-	background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
+	background: linear-gradient(135deg, #041e48 -10%, #60efff 120%);
 }
+// .block-container .btn-back-blue {
+// 	background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
+// }
 
 .block-container .btn-back-orange {
 	background: linear-gradient(135deg, #ff0f7b -20%, #f89b29 120%);
@@ -138,8 +154,11 @@ body:has(.card[data-color='green']:hover) {
 }
 
 .block-container .btn-back-black {
-	background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
+	background: linear-gradient(135deg, #0c214c -20%, #ccf6f9 120%);
 }
+// .block-container .btn-back-black {
+// 	background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
+// }
 
 .block-container .btn-front {
 	position: absolute;
@@ -157,7 +176,10 @@ body:has(.card[data-color='green']:hover) {
 }
 
 .block-container:hover > .btn-back {
-	transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+	transform: translateZ(20px) rotateZ(20deg) rotateX(-10deg) rotateY(-20deg);
+}
+.block-container:hover > .btn-back-alt {
+	transform: translateZ(15px) rotateZ(10deg) rotateX(-20deg) rotateY(-20deg);
 }
 
 .block-container:hover > .btn-front {

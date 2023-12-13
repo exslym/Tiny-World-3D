@@ -22,29 +22,37 @@ const Projects = () => {
 			<div className='flex flex-wrap my-20 gap-16'>
 				{projects.map(project => (
 					<div className='lg:w-[400px] w-full' key={project.name}>
-						<div className='block-container w-12 h-12'>
-							<div className={`btn-back rounded-xl ${project.theme}`} />
-							<div className='btn-front rounded-xl flex justify-center items-center'>
+						<div className='block-container w-64 aspect-[1.5]'>
+							<div className={`btn-back-alt rounded-[0.8rem] ${project.theme}`} />
+							<div className='btn-front p-1 rounded-[0.8rem] flex justify-center items-center overflow-hidden'>
 								<img
-									src={project.iconUrl}
-									alt='Project Icon'
-									className='w-1/2 h-1/2 object-contain'
+									src={project.preview}
+									alt='Project Preview'
+									className='w-full h-full rounded-[0.6rem] max-w-none'
 								/>
 							</div>
 						</div>
-						<div className='mt-5 flex flex-col'>
+						<div className='mt-7 flex flex-col'>
 							<h4 className='text-2xl font-poppins font-semibold'>{project.name}</h4>
-							<p className='mt-2 to-slate-500'>{project.description}</p>
-							<div className='mt-5 flex items-center gap-2 font-poppins'>
+							<p className='mt-2 text-slate-500'>{project.description}</p>
+							<div className='mt-2 flex items-center gap-3 font-poppins'>
 								<Link
-									to={project.Link}
+									to={project.link1}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='font-semibold text-blue-600'
+									className='font-semibold text-slate-500 hover:text-blue-400 px-2 rounded-xl border-2 border-slate-500 hover:border-blue-400'
 								>
-									Live Link
+									GitHub
 								</Link>
-								<img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
+								<Link
+									to={project.link2}
+									target='_blank'
+									rel='noopener noreferrer'
+									className='font-semibold text-slate-500 hover:text-blue-400 px-2 rounded-xl border-2 border-slate-500 hover:border-blue-400'
+								>
+									Website
+								</Link>
+								{/* <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' /> */}
 							</div>
 						</div>
 					</div>
