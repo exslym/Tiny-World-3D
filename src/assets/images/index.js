@@ -1,15 +1,6 @@
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
-import logo from './logo.svg'
+import doctoratwork from './doctoratwork1.png';
+import freelance from './freelance.png';
+import hero from './hero.jpg';
+import logo from './logo.svg';
 
-export {
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
-}
+export { doctoratwork, freelance, hero, logo };

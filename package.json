@@ -12,6 +12,7 @@
 		"react-spring-three",
 		"react-three-drei",
 		"react-three-fiber",
+		"react-vertical-timeline-component",
 		"emailjs",
 		"tailwindcss",
 		"gh-pages"
@@ -36,6 +37,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.20.1",
+		"react-vertical-timeline-component": "^3.6.0",
 		"sass": "^1.69.5"
 	},
 	"devDependencies": {
