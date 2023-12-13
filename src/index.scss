@@ -25,6 +25,9 @@ body:has(.card[data-color='green']:hover) {
 	.max-container {
 		@apply max-w-5xl mx-auto sm:p-16 pb-12 pt-[126px] px-8 min-h-[calc(100vh-80px)];
 	}
+	.contact-container {
+		@apply flex flex-col justify-between max-w-5xl mx-auto sm:p-16 pb-12 pt-[126px] px-8 lg:h-[100vh] h-[100%];
+	}
 
 	.head-text {
 		@apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
@@ -43,7 +46,7 @@ body:has(.card[data-color='green']:hover) {
 	}
 
 	.textarea {
-		@apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+		@apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card resize-none overflow-y-auto;
 	}
 
 	.btn {
@@ -55,11 +58,14 @@ body:has(.card[data-color='green']:hover) {
 	}
 
 	.footer {
-		@apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+		@apply max-w-5xl mx-auto flex flex-col gap-7;
 	}
+	// .footer {
+	// 	@apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+	// }
 
 	.footer-container {
-		@apply flex flex-wrap gap-7 items-center justify-between;
+		@apply flex items-center justify-center;
 	}
 
 	.info-box {
@@ -76,6 +82,12 @@ body:has(.card[data-color='green']:hover) {
 
 	.cta-text {
 		@apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+	}
+}
+
+.contact-container {
+	@media screen and (max-height: 730px) {
+		height: 100%;
 	}
 }
 

@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import skyScene from '../../public/3d/sky.glb';
 // 3D Model from: https://sketchfab.com/3d-models/phoenix-bird-844ba0cf144a413ea92c779f18912042
 
-const Sky = ({ isRotating }) => {
+const Sky = ({ isRotating, ...props }) => {
 	const sky = useGLTF(skyScene);
 	const skyRef = useRef();
 
@@ -15,7 +15,7 @@ const Sky = ({ isRotating }) => {
 	});
 
 	return (
-		<mesh ref={skyRef}>
+		<mesh {...props} ref={skyRef}>
 			<primitive object={sky.scene} />
 		</mesh>
 	);

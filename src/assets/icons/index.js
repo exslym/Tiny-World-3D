@@ -25,7 +25,8 @@ import webpack from './webpack.png';
 
 import arrow from './arrow.svg';
 import contact from './contact.svg';
-import linkedin from './linkedin.svg';
+import email from './email.png';
+import linkedin from './linkedin.png';
 import soundoff from './soundoff.png';
 import soundon from './soundon.png';
 
@@ -35,6 +36,7 @@ export {
 	contact,
 	css,
 	docker,
+	email,
 	express,
 	flutter,
 	git,

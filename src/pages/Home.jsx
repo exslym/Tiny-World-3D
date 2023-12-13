@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { soundoff, soundon } from '../assets/icons';
 import sakura from '../assets/media/sakura.mp3';
+import Footer from '../components/Footer';
 import HomeInfo from '../components/HomeInfo';
 import Loader from '../components/Loader';
 import Bird from '../models/Bird';
@@ -28,14 +29,15 @@ const Home = () => {
 	}, [isPlayingMusic]);
 
 	const adjustIslandForScreenSize = () => {
-		let screenScale = null;
-		let screenPosition = [0, -6.5, -43];
-		let rotation = [0.1, 4.7, 0];
+		let screenScale, screenPosition;
+		let rotation = [0.15, 4.7, 0];
 
-		if (window.innerWidth < 768) {
-			screenScale = [0.9, 0.9, 0.9];
+		if (window.innerWidth <= 768) {
+			screenScale = [0.085, 0.085, 0.085];
+			screenPosition = [0, -1, -1];
 		} else {
-			screenScale = [1, 1, 1];
+			screenScale = [0.11, 0.11, 0.11];
+			screenPosition = [0, -0.9, -1];
 		}
 
 		return [screenScale, screenPosition, rotation];
@@ -44,12 +46,12 @@ const Home = () => {
 	const adjustPlaneForScreenSize = () => {
 		let screenScale, screenPosition;
 
-		if (window.innerWidth < 768) {
-			screenScale = [1.5, 1.5, 1.5];
-			screenPosition = [0, -1.5, 0];
+		if (window.innerWidth <= 768) {
+			screenScale = [0.45, 0.45, 0.45];
+			screenPosition = [-0.05, -0.7, 3.4];
 		} else {
-			screenScale = [3, 3, 3];
-			screenPosition = [0, -3, -3];
+			screenScale = [0.6, 0.6, 0.6];
+			screenPosition = [-0.05, -0.7, 3.4];
 		}
 
 		return [screenScale, screenPosition];
@@ -60,22 +62,21 @@ const Home = () => {
 
 	return (
 		<section className='w-full h-screen relative'>
-			<div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+			<div className='absolute top-28 left-0 right-0 z-[1] flex items-center justify-center'>
 				{currentStage && <HomeInfo currentStage={currentStage} />}
 			</div>
 			<Canvas
 				className={`w-full h-screen bg-transparent ${
 					isRotating ? 'cursor-grabbing' : 'cursor-grab'
 				}`}
-				camera={{ near: 0.1, far: 1000 }}
+				camera={{ fov: 65, near: 0.1, far: 1000 }}
+				// camera={{ near: 0.1, far: 1000 }}
 			>
 				<Suspense fallback={<Loader />}>
-					<directionalLight position={[1, 1, 1]} intensity={2} />
-					<ambientLight intensity={0.5} />
+					<directionalLight position={[20, 15, 20]} intensity={1.5} />
+					<ambientLight intensity={0.8} />
 					<hemisphereLight skyColor='#b1e1ff' groundColor='#000000' intensity={1} />
 
-					<Bird />
-					<Sky isRotating={isRotating} />
 					<Island
 						scale={islandScale}
 						position={islandPosition}
@@ -84,22 +85,29 @@ const Home = () => {
 						setIsRotating={setIsRotating}
 						setCurrentStage={setCurrentStage}
 					/>
+					{/* <Sky scale={[1, 1, 1]} isRotating={isRotating} /> */}
+					<Sky scale={[0.01, 0.01, 0.01]} rotation={[0, 1.8, 0]} isRotating={isRotating} />
+					{/* <Bird scale={[0.003, 0.003, 0.003]} position={[-5, 2, 1]} /> */}
+					<Bird scale={[0.00095, 0.00095, 0.00095]} position={[-4.8, 8, 8]} />
 					<Plane
 						scale={planeScale}
 						position={planePosition}
 						isRotating={isRotating}
-						rotation={[0, 20, 0]}
+						rotation={[0.02, 20.2, 0]}
 					/>
 				</Suspense>
 			</Canvas>
 
-			<div className='absolute bottom-2 left-2'>
-				<img
-					src={!isPlayingMusic ? soundoff : soundon}
-					alt='sound'
-					className='w-10 h-10 cursor-pointer object-contain'
-					onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-				/>
+			<div className='sm:py-4 py-2 flex justify-center items-center gap-8 w-full absolute bottom-0'>
+				<div className='absolute left-2'>
+					<img
+						src={!isPlayingMusic ? soundoff : soundon}
+						alt='sound'
+						className='sm:w-10 w-8 sm:h-10 h-8 cursor-pointer object-contain'
+						onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+					/>
+				</div>
+				<Footer />
 			</div>
 		</section>
 	);

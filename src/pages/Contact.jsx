@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useRef, useState } from 'react';
 import Alert from '../components/Alert';
+import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 import useAlert from '../hooks/useAlert';
 import Fox from '../models/Fox';
@@ -80,88 +81,97 @@ const Contact = () => {
 	};
 
 	return (
-		<section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
+		<section className='relative contact-container !pb-4'>
 			{alert.show && <Alert {...alert} />}
-			<div className='flex-1 min-w-[50%] flex-col'>
-				<h1 className='head-text'>Get in touch</h1>
-				<form className='w-full flex flex-col gap-7 mt-14' onSubmit={handleSubmit}>
-					<label className='text-black-500 font-semibold'>
-						Name
-						<input
-							className='input'
-							type='text'
-							name='name'
-							autoComplete='off'
-							required
-							placeholder='Name'
-							value={form.name}
-							onChange={handleChange}
+			<div className='flex lg:flex-row flex-col mt-2'>
+				<div className='flex-1 min-w-[50%] flex-col'>
+					<h1 className='head-text'>Get in touch</h1>
+					<form className='w-full flex flex-col gap-7 mt-6' onSubmit={handleSubmit}>
+						<label className='text-black-500 font-semibold'>
+							Name
+							<input
+								className='input'
+								type='text'
+								name='name'
+								autoComplete='off'
+								required
+								placeholder='Your name'
+								value={form.name}
+								onChange={handleChange}
+								onFocus={handleFocus}
+								onBlur={handleBlur}
+							/>
+						</label>
+						<label className='text-black-500 font-semibold'>
+							Email
+							<input
+								className='input'
+								type='email'
+								name='email'
+								autoComplete='off'
+								required
+								placeholder='email@gmail.com'
+								value={form.email}
+								onChange={handleChange}
+								onFocus={handleFocus}
+								onBlur={handleBlur}
+							/>
+						</label>
+						<label className='text-black-500 font-semibold'>
+							Message
+							<textarea
+								className='textarea'
+								name='message'
+								autoComplete='off'
+								rows={4}
+								required
+								placeholder='Let me know how I can help you!'
+								value={form.message}
+								onChange={handleChange}
+								onFocus={handleFocus}
+								onBlur={handleBlur}
+							/>
+						</label>
+						<button
+							className='btn'
+							type='submit'
+							disabled={isLoading}
 							onFocus={handleFocus}
 							onBlur={handleBlur}
-						/>
-					</label>
-					<label className='text-black-500 font-semibold'>
-						Email
-						<input
-							className='input'
-							type='email'
-							name='email'
-							autoComplete='off'
-							required
-							placeholder='email@gmail.com'
-							value={form.email}
-							onChange={handleChange}
-							onFocus={handleFocus}
-							onBlur={handleBlur}
-						/>
-					</label>
-					<label className='text-black-500 font-semibold'>
-						Your message
-						<textarea
-							className='textarea'
-							name='message'
-							autoComplete='off'
-							rows={4}
-							required
-							placeholder='Let me know how I can help you!'
-							value={form.message}
-							onChange={handleChange}
-							onFocus={handleFocus}
-							onBlur={handleBlur}
-						/>
-					</label>
-					<button
-						className='btn'
-						type='submit'
-						disabled={isLoading}
-						onFocus={handleFocus}
-						onBlur={handleBlur}
+						>
+							{isLoading ? 'Sending...' : 'Send Message'}
+						</button>
+					</form>
+				</div>
+
+				<div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+					<Canvas
+						camera={{
+							position: [0, 0, 5],
+							fov: 75,
+							near: 0.1,
+							far: 1000,
+						}}
 					>
-						{isLoading ? 'Sending...' : 'Send Message'}
-					</button>
-				</form>
+						<directionalLight intensity={2.5} position={[0, 0, 1]} />
+						<ambientLight intensity={0.5} />
+						<Suspense fallback={<Loader />}>
+							<Fox
+								currentAnimation={currentAnimation}
+								position={[0.5, 0, 0]}
+								rotation={[12.6, -0.6, 0]}
+								scale={[0.7, 0.7, 0.7]}
+							/>
+						</Suspense>
+					</Canvas>
+				</div>
 			</div>
 
-			<div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
-				<Canvas
-					camera={{
-						position: [0, 0, 5],
-						fov: 75,
-						near: 0.1,
-						far: 1000,
-					}}
-				>
-					<directionalLight intensity={2.5} position={[0, 0, 1]} />
-					<ambientLight intensity={0.5} />
-					<Suspense fallback={<Loader />}>
-						<Fox
-							currentAnimation={currentAnimation}
-							position={[0.5, 0.35, 0]}
-							rotation={[12.6, -0.6, 0]}
-							scale={[0.5, 0.5, 0.5]}
-						/>
-					</Suspense>
-				</Canvas>
+			<div>
+				<hr className='lg:mt-16  mt-0 border-slate-200' />
+				<div className='mt-4 sm:py-4 py-2 flex justify-center items-center gap-8 w-full '>
+					<Footer />
+				</div>
 			</div>
 		</section>
 	);

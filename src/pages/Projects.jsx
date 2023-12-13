@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { arrow } from '../assets/icons';
 import CTA from '../components/CTA';
+import Footer from '../components/Footer';
 import { projects } from '../constants';
 
 const Projects = () => {
 	return (
-		<section className='max-container'>
+		<section className='max-container !pb-4'>
 			<h1 className='head-text mt-2'>
 				My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
 			</h1>
@@ -52,7 +52,6 @@ const Projects = () => {
 								>
 									Website
 								</Link>
-								{/* <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' /> */}
 							</div>
 						</div>
 					</div>
@@ -62,6 +61,11 @@ const Projects = () => {
 			<hr className='border-slate-200' />
 
 			<CTA />
+
+			<hr className='sm:mt-16 mt-8 border-slate-200' />
+			<div className='mt-4 sm:py-4 py-2 flex justify-center items-center gap-8 w-full '>
+				<Footer />
+			</div>
 		</section>
 	);
 };

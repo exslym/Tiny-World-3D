@@ -1,8 +1,8 @@
 import {
 	astro,
-	contact,
 	css,
 	docker,
+	email,
 	express,
 	flutter,
 	git,
@@ -35,6 +35,9 @@ import {
 	portfolio_3d,
 	space_invaders,
 } from '../assets/images';
+
+const githubUser = import.meta.env.VITE_APP_GITHUB_USER;
+const linkedinUser = import.meta.env.VITE_APP_LINKEDIN_USER;
 
 export const skills = [
 	{
@@ -190,18 +193,18 @@ export const experiences = [
 export const socialLinks = [
 	{
 		name: 'Contact',
-		iconUrl: contact,
+		iconUrl: email,
 		link: '/contact',
 	},
 	{
 		name: 'GitHub',
 		iconUrl: github,
-		link: 'https://github.com/YourGitHubUsername',
+		link: `https://github.com/${githubUser}/`,
 	},
 	{
 		name: 'LinkedIn',
 		iconUrl: linkedin,
-		link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+		link: `https://www.linkedin.com/in/${linkedinUser}/`,
 	},
 ];
 

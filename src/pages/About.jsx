@@ -2,11 +2,12 @@ import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import CTA from '../components/CTA';
+import Footer from '../components/Footer';
 import { experiences, skills } from '../constants';
 
 const About = () => {
 	return (
-		<section className='max-container'>
+		<section className='max-container !pb-4'>
 			<h1 className='head-text mt-2'>
 				Hey! I'm <span className='blue-gradient_text font-semibold drop-shadow'>Andrei</span>
 			</h1>
@@ -86,9 +87,14 @@ const About = () => {
 				</div>
 			</div>
 
-			<hr className='border-slate-200' />
+			<hr className=' border-slate-200' />
 
 			<CTA />
+
+			<hr className='sm:mt-16 mt-8 border-slate-200' />
+			<div className='mt-4 sm:py-4 py-2 flex justify-center items-center gap-8 w-full '>
+				<Footer />
+			</div>
 		</section>
 	);
 };
