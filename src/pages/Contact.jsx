@@ -8,6 +8,13 @@ const Contact = () => {
 	const [isLoading, setIsLoading] = useState(false);
 	// const [currentAnimation, setCurrentAnimation] = useState('idle');
 
+	//! PRIVATE INFO hidden in env (.env needs to be placed in ./src)
+	const serviceID = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+	const templateID = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+	const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+	const toName = import.meta.env.VITE_APP_EMAILJS_TO_NAME;
+	const toEmail = import.meta.env.VITE_APP_EMAILJS_TO_EMAIL;
+
 	const handleChange = e => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
@@ -19,16 +26,16 @@ const Contact = () => {
 
 		emailjs
 			.send(
-				import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-				import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+				serviceID,
+				templateID,
 				{
 					from_name: form.name,
-					to_name: import.meta.env.VITE_APP_EMAILJS_TO_NAME,
+					to_name: toName,
 					from_email: form.email,
-					to_email: import.meta.env.VITE_APP_EMAILJS_TO_EMAIL,
+					to_email: toEmail,
 					message: form.message,
 				},
-				import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+				publicKey,
 			)
 			.then(
 				() => {
@@ -55,7 +62,7 @@ const Contact = () => {
 
 					// showAlert({
 					// 	show: true,
-					// 	text: "I didn't receive your message 😢",
+					// 	text: "I didn't receive your message!",
 					// 	type: 'danger',
 					// });
 				},
@@ -73,6 +80,7 @@ const Contact = () => {
 							className='input'
 							type='text'
 							name='name'
+							autoComplete='off'
 							required
 							placeholder='Name'
 							value={form.name}
@@ -87,6 +95,7 @@ const Contact = () => {
 							className='input'
 							type='email'
 							name='email'
+							autoComplete='off'
 							required
 							placeholder='email@gmail.com'
 							value={form.email}
@@ -100,6 +109,7 @@ const Contact = () => {
 						<textarea
 							className='textarea'
 							name='message'
+							autoComplete='off'
 							rows={4}
 							required
 							placeholder='Let me know how I can help you!'
