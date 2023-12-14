@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "1.0.0",
 	"type": "module",
-	"homepage": "https://exslym.github.io/Tiny-World-3D/#",
+	"homepage": "https://exslym.github.io/Tiny-World-3D/",
 	"description": "3D Developer Portfolio website using 3D-graphics and animations with ThreeJS, React and Tailwind",
 	"keywords": [
 		"vite",
