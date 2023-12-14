@@ -214,7 +214,7 @@ export const projects = [
 		theme: 'btn-back-blue',
 		link1: 'https://github.com/exslym/My-Portfolio-3D/',
 		link2: 'https://exslym.github.io/My-Portfolio-3D/',
-		name: 'My Portfolio 3D',
+		name: '3D Dev Portfolio',
 		description:
 			'An outstanding and impressive 3D Developer Portfolio website using React, 3D-graphics and animations with ThreeJS and Framer Motion, and TailwindCSS!',
 	},
