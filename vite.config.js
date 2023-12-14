@@ -1,3 +1,4 @@
+import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 import Path from 'path';
 import { fileURLToPath } from 'url';
@@ -99,7 +100,14 @@ export default defineConfig({
 	css: {
 		devSourcemap: true,
 	},
-	plugins: [react(), ViteAliases(), ViteImageOptimizer(DEFAULT_OPTIONS)],
+	plugins: [
+		react(),
+		ViteAliases(),
+		ViteImageOptimizer(DEFAULT_OPTIONS),
+		legacy({
+			targets: ['> 0.5%', 'last 2 versions', 'Firefox ESR', 'not dead'],
+		}),
+	],
 	assetsInclude: ['**/*.glb'],
 	server: {
 		hmr: true,
