@@ -22,7 +22,7 @@ const Bird = ({ ...props }) => {
 		if (window.innerWidth <= 768) {
 			birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.1 - 0.1;
 		} else {
-			birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.1 + 0.32;
+			birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.1 + 0.2;
 		}
 
 		//* Check if the bird reached a certain endpoint relative to the camera
