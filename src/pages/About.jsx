@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Suspense, useRef } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import { experiences, skills } from '../constants';
+import useOnLoadImages from '../hooks/useOnLoadImages';
 
 const About = () => {
+	const wrapperRef = useRef(null);
+	const imagesLoaded = useOnLoadImages(wrapperRef);
+
 	return (
 		<section className='max-container !pb-4'>
 			<h1 className='head-text mt-2'>
@@ -19,11 +23,22 @@ const About = () => {
 			</div>
 			<div className='py-8 flex flex-col'>
 				<h3 className='subhead-text'>My skills</h3>
-				<div className='mt-16 flex flex-wrap gap-12'>
+				<div className='mt-12 flex flex-wrap gap-10'>
 					{skills.map(skill => (
-						<div className='block-container w-20 h-20' key={skill.name}>
-							<div className='btn-back rounded-xl' />
-							<div className='btn-front rounded-xl flex justify-center items-center'>
+						<div className='block-container w-[4.78rem] h-[4.78rem]' key={skill.name}>
+							<div className='btn-front-alt  bg-white rounded-xl shadow-md shadow-slate-200 flex justify-center items-center relative'>
+								{/* {!imagesLoaded ? (
+									<p className='absolute -z-1 leading-[0.5] w-max animate-spin opacity-30 text-2xl'>
+										&#9696;
+									</p>
+								) : (
+									<img
+										src={skill.imageUrl}
+										alt={skill.name}
+										className='absolute z-1 w-1/2 h-1/2 object-contain'
+										onLoad={console.log('Logo loaded!')}
+									/>
+								)} */}
 								<img src={skill.imageUrl} alt={skill.name} className='w-1/2 h-1/2 object-contain' />
 							</div>
 						</div>
@@ -59,7 +74,7 @@ const About = () => {
 									borderBottom: '6px',
 									borderStyle: 'solid',
 									borderBottomColor: experience.borderBottom,
-									boxShadow: 'none',
+									boxShadow: '0px 12px 20px -8px #E2E8F0',
 								}}
 							>
 								<div>

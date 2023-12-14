@@ -105,6 +105,14 @@ body:has(.card[data-color='green']:hover) {
 	box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15), 0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
 }
 
+.logo1 {
+	transition: 250ms;
+	will-change: transform;
+}
+.logo1:hover {
+	transform: translateZ(0px) translateY(5px) rotateX(0deg) rotateY(0deg);
+}
+
 .block-container {
 	position: relative;
 	transition: 250ms;
@@ -122,7 +130,7 @@ body:has(.card[data-color='green']:hover) {
 	transform-origin: bottom right;
 	transform: rotateZ(15deg);
 	will-change: transform;
-	box-shadow: 16px 0 40px #e4e4e4;
+	// box-shadow: 16px 0 40px #e4e4e4;
 }
 .block-container .btn-back-alt {
 	position: absolute;
@@ -135,7 +143,21 @@ body:has(.card[data-color='green']:hover) {
 	transform-origin: bottom right;
 	transform: translateX(-28px) translateY(25px) rotateZ(15deg);
 	will-change: transform;
-	box-shadow: 16px 0 40px #e4e4e4;
+	box-shadow: 15px -15px 40px -10px #cbd5e1;
+}
+.block-container .btn-back-alt1 {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	width: inherit;
+	height: inherit;
+	transition: 250ms;
+	transform-style: preserve-3d;
+	transform-origin: bottom right;
+	transform: scale(1.1) translateX(-10px) translateY(10px) rotateZ(18deg);
+	background-color: #f1fcffb6;
+	will-change: transform;
+	// box-shadow: 16px 0 40px #e4e4e4;
 }
 
 .block-container .btn-back-red {
@@ -187,6 +209,21 @@ body:has(.card[data-color='green']:hover) {
 	overflow: hidden;
 }
 
+.block-container .btn-front-alt {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	width: inherit;
+	height: inherit;
+	background-color: #ffffff;
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	transition: 250ms;
+	transform-style: preserve-3d;
+	transform-origin: top left;
+	overflow: hidden;
+}
+
 .block-container:hover > .btn-back {
 	transform: translateZ(20px) rotateZ(20deg) rotateX(-10deg) rotateY(-20deg);
 }
@@ -196,6 +233,9 @@ body:has(.card[data-color='green']:hover) {
 
 .block-container:hover > .btn-front {
 	transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+}
+.block-container:hover > .btn-front-alt {
+	transform: translateZ(80px) translateY(-5px) rotateX(20deg) rotateY(20deg);
 }
 
 /* Neo Brutalism */

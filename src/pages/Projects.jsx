@@ -40,7 +40,7 @@ const Projects = () => {
 									to={project.link1}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='font-semibold text-slate-500 hover:text-blue-400 px-2 rounded-xl border-2 border-slate-500 hover:border-blue-400'
+									className='font-medium text-slate-500 hover:text-blue-400 px-2 rounded-md border border-slate-500 hover:border-blue-400'
 								>
 									GitHub
 								</Link>
@@ -48,7 +48,7 @@ const Projects = () => {
 									to={project.link2}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='font-semibold text-slate-500 hover:text-blue-400 px-2 rounded-xl border-2 border-slate-500 hover:border-blue-400'
+									className='font-medium text-slate-500 hover:text-blue-400 px-2 rounded-md border border-slate-500 hover:border-blue-400'
 								>
 									Website
 								</Link>
