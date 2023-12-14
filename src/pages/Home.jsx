@@ -31,7 +31,6 @@ const Home = () => {
 	const adjustIslandForScreenSize = () => {
 		let screenScale, screenPosition;
 		let rotation = [0.15, 4.7, 0];
-
 		if (window.innerWidth <= 768) {
 			screenScale = [0.085, 0.085, 0.085];
 			screenPosition = [0, -1, -1];
@@ -39,13 +38,11 @@ const Home = () => {
 			screenScale = [0.11, 0.11, 0.11];
 			screenPosition = [0, -0.9, -1];
 		}
-
 		return [screenScale, screenPosition, rotation];
 	};
 
 	const adjustPlaneForScreenSize = () => {
 		let screenScale, screenPosition;
-
 		if (window.innerWidth <= 768) {
 			screenScale = [0.45, 0.45, 0.45];
 			screenPosition = [-0.05, -0.7, 3.4];
@@ -53,7 +50,6 @@ const Home = () => {
 			screenScale = [0.6, 0.6, 0.6];
 			screenPosition = [-0.05, -0.7, 3.4];
 		}
-
 		return [screenScale, screenPosition];
 	};
 
@@ -70,7 +66,6 @@ const Home = () => {
 					isRotating ? 'cursor-grabbing' : 'cursor-grab'
 				}`}
 				camera={{ fov: 65, near: 0.1, far: 1000 }}
-				// camera={{ near: 0.1, far: 1000 }}
 			>
 				<Suspense fallback={<Loader />}>
 					<directionalLight position={[20, 15, 20]} intensity={1.5} />
@@ -85,9 +80,7 @@ const Home = () => {
 						setIsRotating={setIsRotating}
 						setCurrentStage={setCurrentStage}
 					/>
-					{/* <Sky scale={[1, 1, 1]} isRotating={isRotating} /> */}
 					<Sky scale={[0.01, 0.01, 0.01]} rotation={[0, 1.8, 0]} isRotating={isRotating} />
-					{/* <Bird scale={[0.003, 0.003, 0.003]} position={[-5, 2, 1]} /> */}
 					<Bird scale={[0.00095, 0.00095, 0.00095]} position={[-4.8, 8, 8]} />
 					<Plane
 						scale={planeScale}

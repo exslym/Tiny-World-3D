@@ -64,7 +64,7 @@ const Contact = () => {
 							email: '',
 							message: '',
 						});
-					}, [2000]);
+					}, [3000]);
 				},
 				error => {
 					setIsLoading(false);
@@ -79,6 +79,29 @@ const Contact = () => {
 				},
 			);
 	};
+
+	const adjustFoxForScreenSize = () => {
+		let screenScale, screenPosition, screenRotation;
+		if (window.innerWidth > 768 && window.innerWidth <= 1024) {
+			screenScale = [0.7, 0.7, 0.7];
+			screenPosition = [0.5, 0.5, 0];
+			screenRotation = [12.75, -0.65, 0];
+		} else if (window.innerWidth > 430 && window.innerWidth <= 768) {
+			screenScale = [0.7, 0.7, 0.7];
+			screenPosition = [0.5, 0.3, 0];
+			screenRotation = [12.7, -0.6, 0];
+		} else if (window.innerWidth <= 430) {
+			screenScale = [0.7, 0.7, 0.7];
+			screenPosition = [0.6, 0.5, 0];
+			screenRotation = [12.75, -0.7, 0];
+		} else {
+			screenScale = [0.66, 0.66, 0.66];
+			screenPosition = [0.7, -0.2, 0];
+			screenRotation = [12.6, -0.6, 0];
+		}
+		return [screenScale, screenPosition, screenRotation];
+	};
+	const [foxScale, foxPosition, foxRotation] = adjustFoxForScreenSize();
 
 	return (
 		<section className='relative contact-container !pb-4'>
@@ -144,7 +167,7 @@ const Contact = () => {
 					</form>
 				</div>
 
-				<div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+				<div className='lg:w-1/2 w-full lg:h-auto md:h-[400px] sm:h-[350px] h-[240px]'>
 					<Canvas
 						camera={{
 							position: [0, 0, 5],
@@ -158,9 +181,9 @@ const Contact = () => {
 						<Suspense fallback={<Loader />}>
 							<Fox
 								currentAnimation={currentAnimation}
-								position={[0.5, 0, 0]}
-								rotation={[12.6, -0.6, 0]}
-								scale={[0.7, 0.7, 0.7]}
+								scale={foxScale}
+								position={foxPosition}
+								rotation={foxRotation}
 							/>
 						</Suspense>
 					</Canvas>
