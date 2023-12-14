@@ -66,7 +66,7 @@ const DEFAULT_OPTIONS = {
 export default defineConfig({
 	root: Path.resolve(__dirname, './src'),
 	publicDir: '../public',
-	// base: './',
+	base: './',
 
 	build: {
 		emptyOutDir: true,
