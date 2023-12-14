@@ -25,6 +25,15 @@
             ],
             "~models/*": [
                 "src/models/*"
+            ],
+            "~constants/*": [
+                "src/constants/*"
+            ],
+            "~hooks/*": [
+                "src/hooks/*"
+            ],
+            "~glb/*": [
+                "src/assets/glb/*"
             ]
         }
     }

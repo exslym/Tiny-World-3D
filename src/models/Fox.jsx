@@ -1,7 +1,8 @@
 import { useAnimations, useGLTF } from '@react-three/drei';
 import React, { useEffect, useRef } from 'react';
 
-import foxScene from '../../public/3d/fox.glb';
+import foxScene from '../assets/glb/fox.glb';
+// import foxScene from '../../public/3d/fox.glb';
 // 3D Model from: https://sketchfab.com/3d-models/fox-f372c04de44640fbb6a4f9e4e5845c78
 
 const Fox = ({ currentAnimation, ...props }) => {

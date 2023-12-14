@@ -7,7 +7,7 @@ const Navbar = () => {
 				to='/'
 				className='w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md logo1'
 			>
-				<p className='blue-gradient_text text-lg'>eXs</p>
+				<p className='blue-gradient_text text-2xl leading-none pb-[0.1rem]'>&#8962;</p>
 			</NavLink>
 			<nav className='flex text-lg lg:gap-7 gap-4 font-semibold'>
 				<NavLink

@@ -3,7 +3,8 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 
-import islandScene from '../../public/3d/island.glb';
+import islandScene from '../assets/glb/island.glb';
+// import islandScene from '../../public/3d/island.glb';
 
 const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
 	const islandRef = useRef();
