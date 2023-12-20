@@ -161,19 +161,22 @@ body:has(.card[data-color='green']:hover) {
 }
 
 .block-container .btn-back-red {
-	background: linear-gradient(135deg, #ff4314 -50%, #ff9a76 100%);
+	background: linear-gradient(135deg, #ff4314 -30%, #ffb476 100%);
 }
 
 .block-container .btn-back-green {
-	background: linear-gradient(135deg, #11d3f3 -20%, #adfda2 120%);
+	// background: linear-gradient(135deg, #11d3f3 -20%, #adfda2 120%);
+	background: linear-gradient(135deg, #09bbf7 -20%, #64ffb1 120%);
 }
 
 .block-container .btn-back-yellow {
-	background: linear-gradient(135deg, #f7971e -10%, #ffd200 120%);
+	// background: linear-gradient(135deg, #f7971e -10%, #ffd200 120%);
+	background: linear-gradient(135deg, #ff7904 -10%, #6fee00 120%);
 }
 
 .block-container .btn-back-blue {
-	background: linear-gradient(135deg, #041e48 -10%, #60efff 120%);
+	// background: linear-gradient(135deg, #041e48 -10%, #60efff 120%);
+	background: linear-gradient(135deg, #007d66 -20%, #b7f5ff 120%);
 }
 // .block-container .btn-back-blue {
 // 	background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
@@ -184,11 +187,14 @@ body:has(.card[data-color='green']:hover) {
 }
 
 .block-container .btn-back-pink {
-	background: linear-gradient(135deg, #e81cff -20%, #40c9ff 120%);
+	// background: linear-gradient(135deg, #e81cff -20%, #40c9ff 120%);
+	background: linear-gradient(135deg, #3ae1ff 0%, #dd2af0 120%);
 }
 
 .block-container .btn-back-black {
-	background: linear-gradient(135deg, #0c214c -20%, #ccf6f9 120%);
+	// background: linear-gradient(135deg, #0c214c -20%, #ccf6f9 120%);
+	// background: linear-gradient(135deg, #ccf6f9 -20%, #142e62 120%);
+	background: linear-gradient(135deg, #142e62 -20%, #ccf6f9 120%);
 }
 // .block-container .btn-back-black {
 // 	background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);

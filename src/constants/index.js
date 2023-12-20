@@ -30,6 +30,7 @@ import {
 	currency_list,
 	dcreative,
 	doctoratwork,
+	eventlify,
 	freelance,
 	game_2048,
 	portfolio_3d,
@@ -211,7 +212,7 @@ export const socialLinks = [
 export const projects = [
 	{
 		preview: portfolio_3d,
-		theme: 'btn-back-blue',
+		theme: 'btn-back-pink',
 		link1: 'https://github.com/exslym/My-Portfolio-3D/',
 		link2: 'https://exslym.github.io/My-Portfolio-3D/',
 		name: '3D Dev Portfolio',
@@ -226,6 +227,15 @@ export const projects = [
 		name: '3D T-Shirts Design with AI',
 		description:
 			'A website project where you can make custom design t-shirts in 3D with the help of AI in real-time. You can also choose color or upload your own images to make your T-shirt truly unique.',
+	},
+	{
+		preview: eventlify,
+		theme: 'btn-back-blue',
+		link1: 'https://github.com/exslym/eventlify/',
+		link2: 'https://eventlify-exs.vercel.app/',
+		name: 'Eventlify',
+		description:
+			'The events web application stands as a comprehensive, full-stack platform for managing events taking place globally. With this app you have the capability to purchase tickets for any event published there or even initiate and manage your own events.',
 	},
 	{
 		preview: currency_list,
@@ -254,13 +264,13 @@ export const projects = [
 		description:
 			'Web-based legendary classic arcade game Space Invaders made with JavaScript and Canvas with its iconic pixel graphics and addictive gameplay with mobile adaptivity and touch controls.',
 	},
-	{
-		preview: game_2048,
-		theme: 'btn-back-pink',
-		link1: 'https://github.com/exslym/2048-Game/',
-		link2: 'https://exslym.github.io/2048-Game/',
-		name: '2048 [Game]',
-		description:
-			'This is a popular puzzle game where the player must combine numbered tiles to reach the ultimate goal of creating a tile with the number 2048. When two tiles with the same number collide, they merge into one tile with a value equal to the sum of the two.',
-	},
+	// {
+	// 	preview: game_2048,
+	// 	theme: 'btn-back-pink',
+	// 	link1: 'https://github.com/exslym/2048-Game/',
+	// 	link2: 'https://exslym.github.io/2048-Game/',
+	// 	name: '2048 [Game]',
+	// 	description:
+	// 		'This is a popular puzzle game where the player must combine numbered tiles to reach the ultimate goal of creating a tile with the number 2048. When two tiles with the same number collide, they merge into one tile with a value equal to the sum of the two.',
+	// },
 ];
