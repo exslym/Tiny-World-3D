@@ -30,6 +30,7 @@ import {
 	currency_list,
 	dcreative,
 	doctoratwork,
+	e_commerce,
 	eventlify,
 	freelance,
 	game_2048,
@@ -212,7 +213,7 @@ export const socialLinks = [
 export const projects = [
 	{
 		preview: portfolio_3d,
-		theme: 'btn-back-pink',
+		theme: 'btn-back-blue-violet',
 		link1: 'https://github.com/exslym/My-Portfolio-3D/',
 		link2: 'https://exslym.github.io/My-Portfolio-3D/',
 		name: '3D Dev Portfolio',
@@ -221,16 +222,25 @@ export const projects = [
 	},
 	{
 		preview: ai_3d_tshirts,
-		theme: 'btn-back-black',
+		theme: 'btn-back-dark-blue',
 		link1: 'https://github.com/exslym/3D-AI-Project/',
 		link2: 'https://exslym.github.io/3D-AI-Project/',
-		name: '3D T-Shirts Design with AI',
+		name: '3D T-Shirts AI Design',
 		description:
 			'A website project where you can make custom design t-shirts in 3D with the help of AI in real-time. You can also choose color or upload your own images to make your T-shirt truly unique.',
 	},
 	{
+		preview: e_commerce,
+		theme: 'btn-back-violet-yellow',
+		link1: 'https://github.com/exslym/ecommerce/',
+		link2: 'https://e-commerce-exs.payloadcms.app/',
+		name: 'E-Commerce Tech Shop',
+		description:
+			'A tech-related e-commerce shop page that even guests can visit, allowing users to explore products, apply category filters, and see more products with pagination, which is key for performance in e-commerce projects.',
+	},
+	{
 		preview: eventlify,
-		theme: 'btn-back-blue',
+		theme: 'btn-back-dark-green',
 		link1: 'https://github.com/exslym/eventlify/',
 		link2: 'https://eventlify-exs.vercel.app/',
 		name: 'Eventlify',
@@ -239,7 +249,7 @@ export const projects = [
 	},
 	{
 		preview: currency_list,
-		theme: 'btn-back-green',
+		theme: 'btn-back-blue-green',
 		link1: 'https://github.com/exslym/Crypto-Coins-List/',
 		link2: 'https://cryptocurrency-prices-exslym.vercel.app/',
 		name: 'Cryptocurrency Prices',
@@ -248,7 +258,7 @@ export const projects = [
 	},
 	{
 		preview: dcreative,
-		theme: 'btn-back-red',
+		theme: 'btn-back-orange-light',
 		link1: 'https://github.com/exslym/D-Creative-Studio/',
 		link2: 'https://exslym.github.io/D-Creative-Studio/',
 		name: 'D-Creative Studio',
@@ -257,20 +267,20 @@ export const projects = [
 	},
 	{
 		preview: space_invaders,
-		theme: 'btn-back-yellow',
+		theme: 'btn-back-orange-lime',
 		link1: 'https://github.com/exslym/Space-Invaders_GAME/',
 		link2: 'https://exslym.github.io/Space-Invaders_GAME/',
 		name: 'Space Invaders [Game]',
 		description:
 			'Web-based legendary classic arcade game Space Invaders made with JavaScript and Canvas with its iconic pixel graphics and addictive gameplay with mobile adaptivity and touch controls.',
 	},
-	// {
-	// 	preview: game_2048,
-	// 	theme: 'btn-back-pink',
-	// 	link1: 'https://github.com/exslym/2048-Game/',
-	// 	link2: 'https://exslym.github.io/2048-Game/',
-	// 	name: '2048 [Game]',
-	// 	description:
-	// 		'This is a popular puzzle game where the player must combine numbered tiles to reach the ultimate goal of creating a tile with the number 2048. When two tiles with the same number collide, they merge into one tile with a value equal to the sum of the two.',
-	// },
+	{
+		preview: game_2048,
+		theme: 'btn-back-gray-beige',
+		link1: 'https://github.com/exslym/2048-Game/',
+		link2: 'https://exslym.github.io/2048-Game/',
+		name: '2048 [Game]',
+		description:
+			'This is a popular puzzle game where the player must combine numbered tiles to reach the ultimate goal of creating a tile with the number 2048. When two tiles with the same number collide, they merge into one tile with a value equal to the sum of the two.',
+	},
 ];

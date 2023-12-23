@@ -2,6 +2,7 @@ import ai_3d_tshirts from './ai_3d_tshirts.jpg';
 import currency_list from './currency_list.jpg';
 import dcreative from './dcreative.jpg';
 import doctoratwork from './doctoratwork1.png';
+import e_commerce from './e_commerce.jpg';
 import eventlify from './eventlify.jpg';
 import freelance from './freelance.png';
 import game_2048 from './game_2048.jpg';
@@ -13,6 +14,7 @@ export {
 	currency_list,
 	dcreative,
 	doctoratwork,
+	e_commerce,
 	eventlify,
 	freelance,
 	game_2048,
