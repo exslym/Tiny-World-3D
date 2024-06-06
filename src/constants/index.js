@@ -259,8 +259,8 @@ export const projects = [
 	{
 		preview: dcreative,
 		theme: 'btn-back-orange-light',
-		link1: 'https://github.com/exslym/D-Creative-Studio/',
-		link2: 'https://exslym.github.io/D-Creative-Studio/',
+		link1: 'https://github.com/exslym/d-creative-studio/',
+		link2: 'https://exslym.github.io/d-creative-studio/',
 		name: 'D-Creative Studio',
 		description:
 			'An outstanding animate-on-scroll landing for Creative Studio - a team of innovative designers, developers, videographs and artists who specialize in crafting unique and engaging digital experiences for their clients.',
