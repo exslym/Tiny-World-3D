@@ -13,12 +13,24 @@ const About = () => {
 	return (
 		<section className='max-container !pb-4'>
 			<h1 className='head-text mt-2'>
-				Hey! I'm <span className='blue-gradient_text font-semibold drop-shadow'>Andrei</span>
+				Hey! I'm <span className='blue-gradient_text font-semibold drop-shadow'>Andrés</span>
 			</h1>
 			<div className='mt-5 flex flex-col gap-3 text-slate-500 text-xl font-semibold'>
 				<p>
-					Frontend Developer with experience in TypeScript, JavaScript, Dart and expertise in
-					frameworks like React, Astro, Qwik, ThreeJS and Flutter.
+					Experienced and&nbsp;results&#8209;driven Frontend Developer with 5&nbsp;years
+					of&nbsp;expertise in&nbsp;JavaScript, TypeScript, and&nbsp;advanced libraries like React,
+					NextJS, and&nbsp;ThreeJS.
+					<br />
+					Known for&nbsp;delivering interactive and&nbsp;user&#8209;focused solutions, I&nbsp;have
+					a&nbsp;strong track record of&nbsp;enhancing user engagement and&nbsp;optimizing frontend
+					performance.
+					<br />
+					I&nbsp;am passionate about leveraging the&nbsp;latest technologies to&nbsp;create dynamic
+					digital experiences.
+					<br />
+					With a&nbsp;strong eye for&nbsp;detail and&nbsp;a&nbsp;commitment to&nbsp;quality,
+					I&nbsp;thrive on&nbsp;crafting visually appealing and&nbsp;highly functional web solutions
+					that meet both business and&nbsp;user needs.
 				</p>
 			</div>
 			<div className='py-8 flex flex-col'>
